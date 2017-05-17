@@ -1,0 +1,7 @@
+<map id="ExceptionTestCaseDecorator&lt; ExpectedException &gt;" name="ExceptionTestCaseDecorator&lt; ExpectedException &gt;">
+<area shape="rect" id="node2" href="$class_test_case_decorator.html" title="Decorator for Test cases. " alt="" coords="52,251,188,277"/>
+<area shape="rect" id="node3" href="$class_test_case.html" title="A single test object. " alt="" coords="81,160,159,187"/>
+<area shape="rect" id="node4" href="$class_test_leaf.html" title="A single test object. " alt="" coords="5,83,77,109"/>
+<area shape="rect" id="node5" href="$class_test.html" title="Base class for all test objects.All test objects should be a subclass of Test. Some test objects..." alt="" coords="17,5,65,32"/>
+<area shape="rect" id="node6" href="$class_test_fixture.html" title="Wraps a test case with setUp and tearDown methods.A TestFixture is used to provide a common environme..." alt="" coords="103,83,191,109"/>
+</map>

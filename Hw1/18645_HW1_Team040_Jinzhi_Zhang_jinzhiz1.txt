@@ -1,0 +1,109 @@
+###################################################################
+# Carnegie Mellon University - Electrical and Computer Engineering
+# 18-645: How To Write Fast Code (Spring 2015)
+#
+#     HOMEWORK 1 Answer Sheet
+#
+# Due:  
+#
+# Note: For ease of grading, please follow the format exactly
+#
+#       There are many students in this class, the course staff
+#       would like to automate the process of grading the 
+#       homework so we can spend more time helping you with the 
+#       understanding of the knowledge. 
+#
+#       Thank you for your cooperation. 
+#
+###################################################################
+
+Student Name : Jinzhi Zhang
+
+Team Name : Team 040
+
+Date of Submission : Friday Feb 3, 2017
+
+# =================================================================
+# TASK 0
+# - Please name this file: 18645_HW1_Team{0#}_{Last_First}.txt
+# - e.g. "18645_HW1_Team03_Anderson_Jane.txt”
+
+Is this complete? (Yes/No): Yes
+
+
+# =================================================================
+# TASK 1 
+# - Logging into a cluster machine
+
+Is this complete? (Yes/No): Yes
+
+
+# =================================================================
+# TASK 2 
+# - Creating a git repository
+
+Question 1 : The andrew id wherein the git repository of your team resides : siyuc1
+
+Question 2 : Team name as provided by the course staff (eg. team03) : team040
+
+Question 3 : Report the speed of execution of all three test cases (in matrix_mul_01.dat) using the sequential version on one of the cluster machines:
+Testcase 1 : 0.00805664 milliseconds
+Testcase 2 : 0.0129395 milliseconds
+Testcase 3 : 0.403076 milliseconds
+
+# =================================================================
+# TASK 3 
+# - Learning about your computing resources
+
+Question 1: For ghc51.ghc.andrew.cmu.edu, log in and determine:
+a) The exact processor model
+	Value		        : Intel(R) Core(TM) i7-4785T CPU @ 2.20GHz
+	Source/Command	: cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
+
+b) The number of physical cores it has
+	Value		        : 1
+	Source/Command	: cat /proc/cpuinfo | grep "physical id"| sort | uniq | wc -l
+
+c) The number of virtual cores it has
+    Value           : 8 
+	Source/Command  : cat /proc/cpuinfo | grep "processor" | wc -l
+ 
+d) L1 cache size specification
+  Value           : Data 32k & Instruction 32K
+  Source/Command  : cat /sys/devices/system/cpu/cpu0/cache/index0/size 
+                    cat /sys/devices/system/cpu/cpu0/cache/index1/size 
+    
+e) L2 cache size specification
+  Value           : 256K
+  Source/Command  : cat /sys/devices/system/cpu/cpu0/cache/index2/size 
+    
+f) The level of SSE the processor supports
+  Value           : SSE SSE2 SSE4_1 SSE4_2
+  Source/Command  : cat /proc/cpuinfo 
+    
+
+Question 2: For your laptop, determine:
+a) The exact processor model
+  Value           : Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz
+  Source/Command  : sysctl -n machdep.cpu.brand_string
+    
+b) The number of physical cores it has
+  Value           : 1
+  Source/Command  : system_profiler | grep Processor / system_profiler SPHardwareDataType
+    
+c) The number of virtual cores it has
+  Value           : 8
+  Source/Command  : sysctl machdep.cpu.core_count & sysctl machdep.cpu.thread_count
+    
+d) L1 cache size specification
+  Value           : Data 32768KB & Instruction 32768KB
+  Source/Command  : sudo sysctl -a | grep cache
+    
+e) L2 cache size specification
+  Value           : 262144KB
+  Source/Command  : sudo sysctl -a | grep cache
+    
+f) The level of SSE the processor supports
+  Value           : SSE SSE2 SSE3 SSE4.1 SSE4.2
+  Source/Command  : sysctl -a | grep ".cpu"
+    
